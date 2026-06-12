@@ -1,0 +1,44 @@
+{
+  "name": "ugc-factory",
+  "version": "0.1.0",
+  "description": "Interview-driven UGC video ad factory for Claude Code. Locks a reusable AI creator and product as Higgsfield Elements, generates ratio-matched keyframes, renders Seedance 2.0 clips, and stitches a finished short-form ad with ffmpeg.",
+  "bin": {
+    "ugc-factory": "bin/ugc-factory.js"
+  },
+  "files": [
+    "bin/",
+    "skill/",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node bin/ugc-factory.js --version && echo OK"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "skill",
+    "ugc",
+    "ugc-ads",
+    "higgsfield",
+    "seedance",
+    "video-ads",
+    "ai-video",
+    "ai-creator",
+    "short-form"
+  ],
+  "author": "Charles J Dove",
+  "license": "MIT",
+  "homepage": "https://github.com/charlesdove977/UGC-Factory#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlesdove977/UGC-Factory.git"
+  },
+  "bugs": {
+    "url": "https://github.com/charlesdove977/UGC-Factory/issues"
+  },
+  "engines": {
+    "node": ">=16.7.0"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "ugc-factory",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Interview-driven UGC video ad factory for Claude Code. Locks a reusable AI creator and product as Higgsfield Elements, generates ratio-matched keyframes, renders Seedance 2.0 clips, and stitches a finished short-form ad with ffmpeg.",
   "bin": {
     "ugc-factory": "bin/ugc-factory.js"

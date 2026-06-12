@@ -1,6 +1,12 @@
 # Character and Product Creation Framework
 
-How to lock a reusable on-screen creator and the product as Higgsfield Elements.
+How to build a consistent on-screen creator and product as Higgsfield Elements for a single ad.
+
+## Scope: fresh every run, never a forever-avatar
+
+The character is generated fresh on every run from that run's persona interview. Nothing is saved across runs; there is no locked avatar that returns next time. The words "reusable" and "lock" below mean only this: within THIS one ad, the same element is referenced across all the clips so the creator does not morph between cuts. The next `/ugc-factory` run starts blank and casts a new person.
+
+If the user explicitly wants a recurring brand spokesperson that returns across ads, that is the Soul path (see the table below), not the default.
 
 ## Element vs Soul
 

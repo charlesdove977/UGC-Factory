@@ -18,7 +18,7 @@
 
 Most AI ad tools give you one good clip and a creator whose face changes every shot. UGC Factory fixes the two things that actually break AI UGC:
 
-- **Consistency.** The creator and product are locked once as Higgsfield Elements (an angle set for the person, so they turn and move believably) and reused in every clip. No drift between cuts.
+- **Consistency within an ad.** For a single ad, the creator and product are built once as Higgsfield Elements (an angle set for the person, so they turn and move believably) and referenced across every clip of that ad. No drift between cuts. This is not a saved avatar: every run starts blank, re-interviews the persona, and casts a brand-new creator. Nothing carries over. (Want a recurring spokesperson on purpose? That is the Soul path, not the default.)
 - **A real script.** Seedance renders gibberish when the prompt is blank. UGC Factory writes a full scene script for every single clip: who is on screen, what they say, the camera, and the motion. Nothing is ever left blank.
 
 You answer an interview. It returns a finished ad plus every source asset, organized in one folder.
@@ -61,7 +61,7 @@ Run `/ugc-factory` and it walks one pipeline end to end:
 4. **Format** — length, ratio (9:16, 1:1, 4:5, 16:9), platform; derives the clip count
 5. **Beat sheet** — segments the ad into hook, problem, reveal, demo, CTA, then waits for your approval
 6. **Style routing** — picks the matching genre style skill from your brief (ecommerce, food, fashion, SaaS, and more)
-7. **Cast** — builds a multi-angle character Element, an optional environment Element for a locked background, and a product Element (upload a real photo or generate one)
+7. **Cast** — builds a fresh multi-angle character Element (new every run, never a saved avatar), an optional environment Element for a consistent background, and a product Element (upload a real photo or generate one)
 8. **Keyframes** — ratio-matched, with the elements embedded so the creator and product stay consistent
 9. **Render** — Seedance 2.0 clips, Elements-first, with a full written script on every clip and motion matched to each beat
 10. **Stitch** — ffmpeg concatenates the clips into one ad, with optional B-roll
@@ -93,7 +93,7 @@ The 15 style skills are bundled, so the factory is self-contained and never depe
 
 ## Design notes
 
-- **Stateless by design.** Each run starts blank and re-interviews from scratch. Nothing about your last ad is persisted.
+- **Stateless by design.** Each run starts blank and re-interviews from scratch, casting a new creator every time. Nothing about your last ad, including the character, is persisted across runs.
 - **Elements over chained keyframes.** Generating the creator and product once and reusing them keeps image counts low and consistency high. A 15s ad is one Seedance clip; a 30s ad is two.
 - **The script is `params.prompt`.** There is no separate script field in Seedance. The prompt is the script, and UGC Factory always writes a full one.
 

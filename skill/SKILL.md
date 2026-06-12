@@ -3,7 +3,7 @@ name: ugc-factory
 type: standalone
 version: 0.1.0
 category: marketing
-description: Interview-driven UGC ad factory. Captures product, offer, topic, persona, length, format and ratio, locks a reusable character (and product) as Higgsfield Elements, generates ratio-matched keyframes via GPT Image 2 or Nano Banana Pro, renders Seedance 2.0 clips, and stitches them into a finished UGC ad with optional B-roll. Use when the user says "ugc factory", "/ugc-factory", "make a UGC ad", "UGC video ad", "AI creator ad", or wants an AI spokesperson product ad.
+description: Interview-driven UGC ad factory. Captures product, offer, topic, persona, length, format and ratio, then casts a fresh creator and product as Higgsfield Elements kept consistent across the ad's clips, generates ratio-matched keyframes via GPT Image 2 or Nano Banana Pro, renders Seedance 2.0 clips, and stitches them into a finished UGC ad with optional B-roll. Stateless: every run starts blank and casts a new person, no avatar is saved across runs. Use when the user says "ugc factory", "/ugc-factory", "make a UGC ad", "UGC video ad", "AI creator ad", or wants an AI spokesperson product ad.
 allowed-tools: [Read, Write, Edit, Glob, Grep, Bash, AskUserQuestion, mcp__higgsfield__models_explore, mcp__higgsfield__show_reference_elements, mcp__higgsfield__generate_image, mcp__higgsfield__generate_video, mcp__higgsfield__media_upload, mcp__higgsfield__media_upload_widget, mcp__higgsfield__media_confirm, mcp__higgsfield__job_status, mcp__higgsfield__show_generations]
 metadata:
   version: 0.1.0
@@ -11,7 +11,7 @@ metadata:
 
 <activation>
 ## What
-A single command-driven pipeline that turns a product, offer, and topic into a finished UGC video ad. It interviews the user, locks a reusable on-screen creator (and the product) as Higgsfield Elements, generates ratio-matched keyframe images through the chosen image model (GPT Image 2 or Nano Banana Pro), renders the motion with Seedance 2.0, and stitches the clips into one ad with optional B-roll inserts.
+A single command-driven pipeline that turns a product, offer, and topic into a finished UGC video ad. It interviews the user, casts a fresh on-screen creator and the product as Higgsfield Elements kept consistent across that ad's clips, generates ratio-matched keyframe images through the chosen image model (GPT Image 2 or Nano Banana Pro), renders the motion with Seedance 2.0, and stitches the clips into one ad with optional B-roll inserts. It is stateless: each run starts blank and casts a new person, with no avatar persisted across runs.
 
 ## When to Use
 - User runs `/ugc-factory`
@@ -68,7 +68,7 @@ UGC Factory loaded. Creative director in the chair.
 
 I run one pipeline end to end:
 1. **Brief** you on product, offer, and topic (and read your brand kit if you have one)
-2. **Cast** the on-screen creator and lock the product as reusable Elements
+2. **Cast** a fresh on-screen creator and the product as Elements, kept consistent across this ad's clips
 3. **Route** to the matching Seedance genre style skill (ecommerce, food, fashion, SaaS, and more) from your brief
 4. **Generate** ratio-matched keyframes via GPT Image 2 or Nano Banana Pro
 5. **Render** the motion with Seedance 2.0 (Elements-first, keyframes where needed)

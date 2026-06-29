@@ -31,7 +31,7 @@ You answer an interview. It returns a finished ad plus every source asset, organ
 
 Install the Higgsfield MCP here:
 
-**https://higgsfield.ai/s/higgsfield-mcp-v-2-ig-charlieautomates-LKwfPT**
+**https://higgsfield.ai/s/higgsfield-mcp-v3-earning-series-charlieautomates-ptQTLe**
 
 Setup walkthrough: https://www.youtube.com/watch?v=SY8kQ6qe4YQ
 
